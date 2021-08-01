@@ -1,1 +1,8 @@
+out
 node_modules
+.vscode
+.vscode-test/
+*.vsix
+/.vscodeignore
+/npm-debug.log
+package-lock.json

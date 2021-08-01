@@ -21,7 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(uvmMap);
 
 	//	******************************************  //
-	//	*************** hover part ***************	//
+	//	*************** hover part ***************	//6
 	//	******************************************  //
 	context.subscriptions.push(
 		vscode.languages.registerHoverProvider(

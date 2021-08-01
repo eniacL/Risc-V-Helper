@@ -38,6 +38,10 @@
 				"match": "\\b((vlseg<nf>e<eew>.v)|(vsseg<nf>e<eew>.v)|(vlseg[1-9]\\d*e[1-9]\\d*.v)|(vsseg[1-9]\\d*e[1-9]\\d*.v))\\b"
 			},
 			{
+				"name": "keyword.control.rv_assembly.vec_ls_SS",
+				"match": "\\b((vlseg<nf>e<eew>ff.v)|(vsseg<nf>e<eew>.v)|(vlseg[1-9]\\d*e[1-9]\\d*ff.v)|(vsseg[1-9]\\d*e[1-9]\\d*ff.v))\\b"
+			},
+			{
 				"name": "keyword.control.rv_assembly.vec_ls_IS",
 				"match": "\\b((vlsseg<nf>e<eew>.v)|(vssseg<nf>e<eew>.v)|(vlsseg[1-9]\\d*e[1-9]\\d*.v)|(vssseg[1-9]\\d*e[1-9]\\d*.v))\\b"
 			},
