@@ -1,0 +1,70 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "rv_assembly",
+	"patterns": [
+		{
+			"include": "#Vector_LS"
+		},
+		{
+			"include": "#brackets",
+			"include": "#annotation"
+		}
+	],
+	"repository": {
+		"Vector_LS": {
+			"patterns": [
+			{
+				"name": "keyword.control.rv_assembly.vec_ls_unit_stride",
+				"match": "\\b(vsetvli)\\b"
+			},
+			{
+				"name": "keyword.control.rv_assembly.vec_ls_unit_stride",
+				"match": "\\b((vle8.v|vle16.v|vle32.v|vle64.v|vle128.v|vle256.v|vle512.v|vle1024.v)|(vse8.v|vse16.v|vse32.v|vse64.v|vse128.v|vse256.v|vse512.v|vse1024.v))\\b"
+			},
+			{
+				"name": "keyword.control.rv_assembly.vec_ls_unit_stride",
+				"match": "\\b(vle8ff.v|vle16ff.v|vle32ff.v|vle64ff.v|vle128ff.v|vle256ff.v|vle512ff.v|vle1024ff.v)\\b"
+			},
+			{
+				"name": "keyword.control.rv_assembly.vec_ls_stride",
+				"match": "\\b((vlse8.v|vlse16.v|vlse32.v|vlse64.v|vlse128.v|vlse256.v|vlse512.v|vlse1024.v)|(vsse8.v|vsse16.v|vsse32.v|vsse64.v|vsse128.v|vsse256.v|vsse512.v|vsse1024.v))\\b"
+			},
+			{
+				"name": "keyword.control.rv_assembly.vec_ls_USS",
+				"match": "\\b((vluxei8.v|vluxei16.v|vluxei32.v|vluxei64.v)|(vloxei8.v|vloxei16.v|vloxei32.v|vloxei64.v)|(vsuxei8.v|vsuxei16.v|vsuxei32.v|vsuxei64.v)|(vsoxei8.v|vsoxei16.v|vsoxei32.v|vsoxei64.v))\\b"
+			},
+			{
+				"name": "keyword.control.rv_assembly.vec_ls_SS",
+				"match": "\\b((vlseg<nf>e<eew>.v)|(vsseg<nf>e<eew>.v)|(vlseg[1-9]\\d*e[1-9]\\d*.v)|(vsseg[1-9]\\d*e[1-9]\\d*.v))\\b"
+			},
+			{
+				"name": "keyword.control.rv_assembly.vec_ls_IS",
+				"match": "\\b((vlsseg<nf>e<eew>.v)|(vssseg<nf>e<eew>.v)|(vlsseg[1-9]\\d*e[1-9]\\d*.v)|(vssseg[1-9]\\d*e[1-9]\\d*.v))\\b"
+			},
+			{
+				"name": "keyword.control.rv_assembly.vec_ls_IS",
+				"match": "\\b((vl1r.v|vl1re8.v|vl1re16.v|vl1re32.v|vl1re64.v|vl1re128.v|vl1re256.v|vl1re512.v|vl1re1024.v)|(vl2r.v|vl2re8.v|vl2re16.v|vl2re32.v|vl2re64.v|vl2re128.v|vl2re256.v|vl2re512.v|vl2re1024.v)|(vl4r.v|vl4re8.v|vl4re16.v|vl4re32.v|vl4re64.v|vl4re128.v|vl4re256.v|vl4re512.v|vl4re1024.v)|(vl8r.v|vl8re8.v|vl8re16.v|vl8re32.v|vl8re64.v|vl8re128.v|vl8re256.v|vl8re512.v|vl8re1024.v)|(vs1r.v|vs2r.v|vs4r.v|vs8r.v))\\b"
+			}
+			]
+
+		},
+		"brackets": {
+			"name": "string.quoted.double.rv_assembly.brackets",
+			"begin": "\\(",
+			"end": "\\)",
+			"patterns": [
+				{
+					"name": "constant.character.escape.rv_assembly",
+					"match": "\\\\."
+				}
+			]
+		},
+		"annotation": {
+			"name": "string.quoted.double.rv_assembly.annotation",
+			"begin": "#",
+			"end": "$\\n?"
+		}
+	},
+
+	"scopeName": "source.log"
+}
